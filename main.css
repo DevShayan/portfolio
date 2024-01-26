@@ -1,0 +1,142 @@
+:root {
+	--flutter-color: rgb(95, 201, 248);
+	--accent-color: brown;
+	--accent-color-light1: rgb(230, 169, 169);
+}
+
+body {
+	margin: 0;
+}
+
+.menu-bar {
+	position: fixed;
+	display: block;
+	align-self: center;
+	background-color: gainsboro;
+	margin-left: 20px;
+	border-radius: 99px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#menu-bar-ul {
+	list-style-type: none;
+	padding: 0px 10px 0px 10px;
+}
+
+.icons {
+	width: 15px;
+	padding: 15px;
+	cursor: pointer;
+}
+
+.icons:hover {
+	background-color: gray;
+	border-radius: 99px;
+}
+
+.section-1 {
+	width: 100%;
+	height: 100vh;
+}
+
+#s1-m-name {
+	color: var(--accent-color);
+	font-weight: bold;
+	font-size: 4rem;
+}
+
+#s1-flutter {
+	color: var(--flutter-color);
+	font-weight: bold;
+	font-size: 4rem;
+}
+
+.s1-info-pane {
+	position: relative;
+	width: fit-content;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 3rem;
+}
+
+.section-2 {
+	width: 100%;
+	height: 100vh;
+	background-color: var(--accent-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cards-wrapper {
+	width: min-content;
+	display: flex;
+}
+
+.s2-content-wrapper {
+	width: min-content;
+}
+
+#profile-img {
+	width: 350px;
+	height: 350px;
+	border-radius: 99px;
+	object-fit: cover;
+	margin: 20px;
+	transition: all 0.3s;
+}
+
+#profile-img:hover {
+	border-radius: 50%;
+}
+
+/* #profile-img:hover {
+	border-radius: 999px;
+	animation: border-anim 3s;
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+} */
+
+@keyframes border-anim {
+	50% {
+		border-radius: 499px;
+	}
+	100% {
+		border-radius: 999px;
+	}
+}
+
+.s2-cards {
+	width: 140px;
+	height: 140px;
+	border-radius: 40px;
+	background-color: var(--accent-color-light1);
+	padding: 20px;
+	margin: 10px;
+	text-align: center;
+	cursor: pointer;
+	transition: transform 0.2s;
+}
+
+.s2-cards:hover {
+	transform: scale(1.05);
+}
+
+.s2-cards-ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: auto;
+}
+
+.s2-card-icons {
+	width: 30px;
+	margin: auto;
+}
+
+#s2-para {
+	text-align: justify;
+	padding: 0px 16px;
+	color: white;
+}
+
