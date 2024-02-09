@@ -4,6 +4,7 @@
 	--accent-color: brown;
 	--accent-color-light1: rgb(230, 169, 169);
 	--hint-color: rgb(219, 219, 219);
+	--menu-bar-margin-left: 20px;
 }
 
 html {
@@ -17,7 +18,7 @@ body {
 
 .menu-bar {
 	position: fixed;
-	margin-left: 20px;
+	margin-left: var(--menu-bar-margin-left);
 	border-radius: 99px;
 	top: 50%;
 	transform: translateY(-50%);
@@ -235,7 +236,9 @@ body {
 
 @media only screen and (max-width: 900px) {
 	.menu-bar {
-		top: 84%;
+		top: auto;
+		margin-left: 0;
+		bottom: var(--menu-bar-margin-left);
 		left: 50%;
 		transform: translateX(-50%);
 	}
