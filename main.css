@@ -1,6 +1,6 @@
 :root {
-	--flutter-color: rgb(95, 201, 248);
-	--flutter-color-dark1: rgb(40, 170, 230);
+	--flutter-color: rgb(69, 198, 251);
+	--flutter-color-dark1: rgb(0, 85, 159);
 	--accent-color: brown;
 	--accent-color-light1: rgb(230, 169, 169);
 	--hint-color: rgb(219, 219, 219);
@@ -67,6 +67,11 @@ body {
 	color: var(--flutter-color);
 	font-weight: bold;
 	font-size: 4rem;
+}
+
+#s1-flutter-img {
+	width: 50px;
+	padding: 0;
 }
 
 #section-2 {
