@@ -5,6 +5,7 @@
 	--accent-color-light1: rgb(230, 169, 169);
 	--hint-color: rgb(219, 219, 219);
 	--menu-bar-margin-left: 3dvh;
+	--card-margin: 10px;
 }
 
 html {
@@ -118,7 +119,7 @@ body {
 	height: 350px;
 	border-radius: 80px;
 	object-fit: cover;
-	margin: 14px;
+	margin: 10px;
 	transition: all 0.3s;
 }
 
@@ -126,20 +127,28 @@ body {
 	border-radius: 50%;
 }
 
-.s2-cards {
+.s2-cards,
+.s4-cards,
+.s3-cards {
 	flex-grow: 1;
 	flex-basis: 0;
 	border-radius: 40px;
-	background-color: var(--accent-color-light1);
 	padding: 20px;
-	margin: 14px;
+	margin: var(--card-margin);
 	text-align: center;
 	cursor: pointer;
-	transition: transform 0.2s;
+	transition: all 0.3s;
 }
 
-.s2-cards:hover {
-	transform: scale(1.05);
+.s2-cards {
+	background-color: var(--accent-color-light1);
+}
+
+.s2-cards:hover,
+.s4-cards:hover,
+.s3-cards:hover {
+	transform: scale(1.03);
+	box-shadow: 8px 8px 15px;
 }
 
 .s2-cards-ul {
@@ -148,15 +157,30 @@ body {
 	margin: auto;
 }
 
-.s2-card-icons {
+.s2-card-icons,
+.s4-card-icons,
+.s3-card-icons {
 	width: 30px;
 	margin: auto;
 }
 
 #s2-para {
 	text-align: justify;
-	padding: 0px 16px;
+	padding: 0px var(--card-margin);
 	color: white;
+}
+
+#section-4 {
+	width: 100%;
+	min-height: 100vh;
+	background-color: purple;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#s4-cards-wrapper {
+	display: flex;
 }
 
 #section-3 {
@@ -174,20 +198,12 @@ body {
 	justify-content: center;
 }
 
-.s3-cards {
-	flex-grow: 1;
-	flex-basis: 0;
-	border-radius: 40px;
-	background-color: var(--flutter-color);
-	padding: 20px;
-	margin: 10px;
-	text-align: center;
-	cursor: pointer;
-	transition: transform 0.2s;
+.s4-cards {
+	background-color: #bb74bb;
 }
 
-.s3-cards:hover {
-	transform: scale(1.05);
+.s3-cards {
+	background-color: var(--flutter-color);
 }
 
 #s3-message-card-row2 {
@@ -199,7 +215,7 @@ body {
 #s3-contact-name-input,
 #s3-msg-text {
 	height: 2.6rem;
-	margin: 10px;
+	margin: var(--card-margin);
 	background-color: transparent;
 	border-radius: 80px;
 	outline: var(--flutter-color) solid 3px;
@@ -247,7 +263,13 @@ body {
 	background-color: white;
 }
 
-/* ######################################################### */
+a {
+	color: currentColor;
+	text-decoration: none;
+}
+
+
+/* ############################ Responsive ############################ */
 
 @media only screen and (max-width: 900px) {
 	.menu-bar {
@@ -266,5 +288,9 @@ body {
 	#s2-outer-content {
 		flex-direction: column;
 		align-items: center;
+	}
+
+	#section-3 {
+		padding-bottom: 60px;
 	}
 }
