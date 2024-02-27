@@ -36,11 +36,19 @@ body {
 	width: 25px;
 	padding: 10px;
 	cursor: pointer;
+	transition: all 0.3s;
 }
 
 .menu-icons:hover {
-	background-color: gray;
+	background-color: #00000048;
 	border-radius: 99px;
+	fill: white;
+}
+
+.menu-icon-selected {
+	background-color: var(--flutter-color);
+	border-radius: 99px;
+	fill: white;
 }
 
 #section-1 {

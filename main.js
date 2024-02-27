@@ -25,4 +25,9 @@ function main() {
 	$("#s4-snake-card").click(function() {
 		window.open("https://devshayan.github.io/snake_game/", "_blank");
 	});
+
+	$(".menu-icons").click(function(){
+		$(".menu-icons").removeClass("menu-icon-selected");
+		$(this).addClass("menu-icon-selected");
+	});
 }
