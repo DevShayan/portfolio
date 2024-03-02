@@ -31,3 +31,4 @@ function main() {
 		$(this).addClass("menu-icon-selected");
 	});
 }
+
