@@ -249,6 +249,11 @@ body {
 	color: var(--hint-color);
 }
 
+::selection {
+	color: black;
+	background-color: var(--flutter-color);
+}
+
 
 #s3-send-msg {
 	width: 100%;
@@ -299,6 +304,6 @@ a {
 	}
 
 	#section-3 {
-		padding-bottom: 60px;
+		padding-bottom: 100px;
 	}
 }
