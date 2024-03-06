@@ -6,6 +6,7 @@
 	--hint-color: rgb(219, 219, 219);
 	--menu-bar-margin-left: 3dvh;
 	--card-margin: 10px;
+	--mobile-view-h-padding: 20px;
 }
 
 html {
@@ -45,12 +46,6 @@ body {
 	fill: white;
 }
 
-.menu-icon-selected {
-	background-color: var(--flutter-color);
-	border-radius: 99px;
-	fill: white;
-}
-
 #section-1 {
 	width: 100%;
 	min-height: 100vh;
@@ -83,6 +78,31 @@ body {
 	padding: 0;
 }
 
+.cards-wrapper {
+	display: flex;
+}
+
+.cards {
+	flex-grow: 1;
+	flex-basis: 0;
+	border-radius: 40px;
+	padding: 20px;
+	margin: var(--card-margin);
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.cards:hover {
+	transform: scale(1.03);
+	box-shadow: 8px 8px 15px;
+}
+
+.card-icons {
+	width: 30px;
+	margin: auto;
+}
+
 #section-2 {
 	width: 100%;
 	min-height: 100vh;
@@ -111,16 +131,6 @@ body {
 	align-items: start;
 }
 
-.s2-cards-wrapper {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.s2-content-wrapper {
-	width: 100%;
-}
-
 #profile-img {
 	max-width: 350px;
 	width: 100%;
@@ -135,28 +145,8 @@ body {
 	border-radius: 50%;
 }
 
-.s2-cards,
-.s4-cards,
-.s3-cards {
-	flex-grow: 1;
-	flex-basis: 0;
-	border-radius: 40px;
-	padding: 20px;
-	margin: var(--card-margin);
-	text-align: center;
-	cursor: pointer;
-	transition: all 0.3s;
-}
-
 .s2-cards {
 	background-color: var(--accent-color-light1);
-}
-
-.s2-cards:hover,
-.s4-cards:hover,
-.s3-cards:hover {
-	transform: scale(1.03);
-	box-shadow: 8px 8px 15px;
 }
 
 .s2-cards-ul {
@@ -165,17 +155,23 @@ body {
 	margin: auto;
 }
 
-.s2-card-icons,
-.s4-card-icons,
-.s3-card-icons {
-	width: 30px;
-	margin: auto;
-}
-
 #s2-para {
 	text-align: justify;
 	padding: 0px var(--card-margin);
 	color: white;
+}
+
+#section-5 {
+	width: 100%;
+	min-height: 100vh;
+	background-color: darkgoldenrod;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.s5-cards {
+	background-color: rgb(218, 180, 84)
 }
 
 #section-4 {
@@ -187,8 +183,8 @@ body {
 	align-items: center;
 }
 
-#s4-cards-wrapper {
-	display: flex;
+.s4-cards {
+	background-color: #bb74bb;
 }
 
 #section-3 {
@@ -204,10 +200,6 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-}
-
-.s4-cards {
-	background-color: #bb74bb;
 }
 
 .s3-cards {
@@ -301,6 +293,15 @@ a {
 	#s2-outer-content {
 		flex-direction: column;
 		align-items: center;
+	}
+
+	#section-1,
+	#section-2,
+	#section-5,
+	#section-4,
+	#section-3 {
+		width: calc(100% - var(--mobile-view-h-padding)*2);
+		padding: 0px var(--mobile-view-h-padding);
 	}
 
 	#section-3 {

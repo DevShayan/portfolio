@@ -26,9 +26,13 @@ function main() {
 		window.open("https://devshayan.github.io/snake_game/", "_blank");
 	});
 
-	$(".menu-icons").click(function(){
-		$(".menu-icons").removeClass("menu-icon-selected");
-		$(this).addClass("menu-icon-selected");
+	$("#s5-fiverr-card").click(function() {
+		window.open(" https://www.fiverr.com/shayanthedev", "_blank");
 	});
+
+	$("#s5-github-card").click(function() {
+		window.open("https://github.com/DevShayan/", "_blank");
+	});
+
 }
 
