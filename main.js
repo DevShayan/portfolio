@@ -1,6 +1,22 @@
 $(document).ready(main);
 
+
 function main() {
+	section2();
+	section5();
+	section4();
+	section3();
+}
+
+
+function section2() {
+	$("#projects-card").click(function() {
+		window.location = "#section-4";
+	});
+}
+
+
+function section3() {
 	var myEmail = $("#my-email").text();
 	var myWhatsapp = $("#my-whatsapp").text();
 
@@ -17,7 +33,10 @@ function main() {
 		var message = $("#s3-msg-text").val();
 		window.open(`mailto:${myEmail}?subject=${name}&body=${message}`, "_blank");
 	});
+}
 
+
+function section4() {
 	$("#s4-gpa-calc-card").click(function() {
 		window.open("https://devshayan.github.io/gpa_calculator/", "_blank");
 	});
@@ -25,7 +44,10 @@ function main() {
 	$("#s4-snake-card").click(function() {
 		window.open("https://devshayan.github.io/snake_game/", "_blank");
 	});
+}
 
+
+function section5() {
 	$("#s5-fiverr-card").click(function() {
 		window.open(" https://www.fiverr.com/shayanthedev", "_blank");
 	});
@@ -34,5 +56,12 @@ function main() {
 		window.open("https://github.com/DevShayan/", "_blank");
 	});
 
+	$("#s5-guru-card").click(function() {
+		window.open("https://www.guru.com/freelancers/devshayan", "_blank");
+	});
+
+	$("#s5-kwork-card").click(function() {
+		window.open("https://kwork.com/user/devshayan", "_blank");
+	});
 }
 
