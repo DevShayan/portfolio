@@ -276,6 +276,31 @@ a {
 	text-decoration: none;
 }
 
+.proj-img {
+	width: calc(100vw/5);
+}
+
+.projs-wrapper {
+	display: flex;
+}
+
+.projs-wrapper > * {
+	margin: calc(100vw/80);
+}
+
+.proj-text {
+	color: white;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+.urdu {
+	position: relative;
+	font-family: "Noto Nastaliq Urdu", serif;
+	top: -16px;
+}
+
 
 /* ############################ Responsive ############################ */
 
@@ -309,5 +334,15 @@ a {
 
 	#section-3 {
 		padding-bottom: 100px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.projs-wrapper {
+		flex-direction: column;
+	}
+	
+	.proj-img {
+		width: calc(100vw/2);
 	}
 }
