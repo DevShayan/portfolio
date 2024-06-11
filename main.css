@@ -280,6 +280,10 @@ a {
 	width: calc(100vw/5);
 }
 
+#proj-img:playing {
+	opacity: 0.1;
+}
+
 .projs-wrapper {
 	display: flex;
 }
